@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ztrohub | Welcome to Wonderland</title>
+  <title>Deploy Blog di Github Pages dengan Hexo | Ztrohub | Welcome to Wonderland</title>
 
   
   <meta name="author" content="Ztroid">
@@ -14,12 +14,15 @@
   
 
   
+  
+  <meta name="keywords" content="Hexo,nodeJS">
+  
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  
+  <meta property="og:title" content="Deploy Blog di Github Pages dengan Hexo"/>
 
   <meta property="og:site_name" content="Ztrohub"/>
 
@@ -60,12 +63,11 @@
 </header>
 
     <main class="site-main posts-loop">
-    
-  <article>
+    <article>
 
   
     
-    <h3 class="article-title"><a href="/2021/08/15/Deploy-Blog-di-Github-Pages-dengan-Hexo/"><span>Deploy Blog di Github Pages dengan Hexo</span></a></h3>
+    <h3 class="article-title"><span>Deploy Blog di Github Pages dengan Hexo</span></h3>
     
   
 
@@ -132,13 +134,32 @@
   </div>
 </article>
 
-
-
-
-<nav class="pagination">
   
-  
-</nav>
+	<section id="comment" class="comment">
+		<div id="gitalk-container"></div>
+	</section>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script>
+		var gitalk = new Gitalk({
+			clientID: '13e861fe3986bf8596a7',
+			clientSecret: 'eeacb20916e1b3e57ffefc1c570a8fd1a088ea07',
+			repo: 'Ztrohub.github.io',
+			owner: 'Ztrohub',
+			admin: ['Ztrohub'],
+			id: location.pathname,
+			distractionFreeMode: false
+		})
+
+		gitalk.render('gitalk-container')
+	</script>
+
+
+
+
+
+
+
     </main>
 
     <footer class="site-footer">
