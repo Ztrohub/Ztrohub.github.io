@@ -15,7 +15,7 @@
 
   
   
-  <meta name="keywords" content="Hexo,nodeJS">
+  <meta name="keywords" content="Hexo,Node.js">
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -74,7 +74,7 @@
   <div class="article-top-meta">
     <span class="posted-on">
       <a href="/2021/08/15/Deploy-Blog-di-Github-Pages-dengan-Hexo/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-08-15T01:30:55.000Z">
+        <time class="entry-date published" datetime="2021-08-15T02:56:04.000Z">
           2021-08-15
         </time>
       </a>
@@ -87,20 +87,72 @@
   <div class="article-content">
     <div class="entry">
       
-        <h1 id="Pengantar"><a href="#Pengantar" class="headerlink" title="Pengantar"></a>Pengantar</h1><ul>
+        <p>Github Pages merupakan layanan hosting web statis yang diberikan oleh Github. Layanan ini diberikan secara gratis dan kita juga akan mendapatkan subdomain <code>.github.io</code>.</p>
+<p>Hexo adalah framework blog sederhana dan powerfull yang didukung oleh Node.js. Web statis generator yang super cepat ini hanya membutuhkan waktu beberapa detik untuk membangun sebuah website lengkap.</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="Pengantar"><a href="#Pengantar" class="headerlink" title="Pengantar"></a>Pengantar</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo Documentation</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.petanikode.com/github-pages/">Github Pages Petani Kode</a></li>
 </ul>
-<p>&nbsp;</p>
-<h1 id="Dibutuhkan"><a href="#Dibutuhkan" class="headerlink" title="Dibutuhkan"></a>Dibutuhkan</h1><ul>
+<h2 id="Dibutuhkan"><a href="#Dibutuhkan" class="headerlink" title="Dibutuhkan"></a>Dibutuhkan</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Install Node.js</a></li>
 </ul>
+<hr>
+<h2 id="Langkah-Langkah"><a href="#Langkah-Langkah" class="headerlink" title="Langkah-Langkah"></a>Langkah-Langkah</h2><p>&nbsp;</p>
+<h3 id="1-Buat-repo-Github-Pages"><a href="#1-Buat-repo-Github-Pages" class="headerlink" title="1. Buat repo Github Pages"></a>1. Buat repo Github Pages</h3><p>Pergi ke <a target="_blank" rel="noopener" href="https://github.com/new">https://github.com/new</a>,  buat repository dengan nama <code>username.github.io</code>. <br>Sebagai contoh postingan ini memakai <code>Ztrohub.github.io</code>. <br>Lalu click <strong>Create repository</strong>.</p>
 <p>&nbsp;</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu massa elementum, bibendum massa fringilla, efficitur dui. Ut a tristique arcu, ut porttitor massa. Aenean scelerisque quam nisl, dignissim condimentum tortor ullamcorper et. Quisque cursus lorem placerat nunc tincidunt sagittis. Suspendisse porttitor elementum purus at gravida. Nam vel scelerisque purus. Nullam molestie pulvinar lacus ut imperdiet. Integer sed metus vel augue sodales convallis. Nunc feugiat pulvinar quam.</p>
-<p>Nulla facilisi. Vestibulum lobortis augue ut neque feugiat tempor. Integer quis semper ligula. Fusce convallis lorem mi, eget dictum elit rutrum in. Maecenas luctus felis at risus hendrerit luctus. Vestibulum malesuada libero orci, ac tempor urna auctor ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent faucibus nibh vel dui euismod molestie. Sed eget urna odio. Nullam dignissim orci et lectus rhoncus, sit amet vestibulum nisi eleifend. Morbi gravida dolor non nunc vehicula, nec dictum turpis ultrices. Cras malesuada hendrerit ultricies. Curabitur eleifend, ligula in ultrices faucibus, lectus dui aliquet nulla, rutrum posuere sapien justo at orci.</p>
-<p>Nam accumsan elit et risus rutrum, at fringilla nibh placerat. Curabitur finibus, est at elementum tincidunt, ex ligula sagittis metus, malesuada placerat purus velit id metus. Aenean a ligula arcu. Vestibulum nec diam in justo vehicula tempor. Donec tempus viverra mauris, ut congue massa porttitor nec. Mauris dapibus iaculis facilisis. Vivamus libero enim, tempor convallis tortor posuere, rutrum scelerisque metus. Ut varius vehicula neque, ut blandit eros rutrum porta. Phasellus viverra maximus augue ut venenatis. Aliquam vitae malesuada enim. In aliquam sed mi et mattis.</p>
-<p>Mauris pulvinar sapien pharetra, eleifend neque vel, convallis nisl. Fusce eros turpis, vestibulum nec porttitor vel, finibus sed massa. Donec finibus, augue non consectetur pharetra, ligula ante ultrices tellus, sit amet hendrerit elit lectus sit amet tortor. Aenean facilisis felis id turpis pharetra, et fringilla neque tristique. Fusce nec dui placerat, euismod ligula in, volutpat libero. Maecenas in faucibus velit. Ut eget ullamcorper nunc, non aliquam orci. Maecenas tellus lorem, placerat a massa porttitor, hendrerit rhoncus lacus. Phasellus rhoncus velit arcu, ut tempor felis imperdiet ac. Nunc ut tortor id nibh lacinia lacinia. Donec id ullamcorper tortor.</p>
-<p>Donec a suscipit erat. Maecenas a diam vitae quam vestibulum aliquam imperdiet eget justo. Nullam commodo et erat quis efficitur. Nulla eu viverra nunc. In interdum, tellus a lobortis convallis, velit orci euismod elit, eu ullamcorper quam elit vitae leo. Vivamus eget tellus sed urna convallis fermentum. Nam fringilla laoreet luctus. Pellentesque pretium interdum scelerisque. Donec mi libero, ullamcorper sit amet purus sit amet, consequat consequat purus. Duis blandit leo eu urna gravida malesuada. Phasellus congue non felis sit amet placerat. Phasellus luctus eros id enim efficitur tempus. Pellentesque faucibus odio tincidunt elit molestie sodales. Sed purus lectus, sagittis a ultrices a, blandit eu eros.</p>
+<h3 id="2-Install-Hexo"><a href="#2-Install-Hexo" class="headerlink" title="2. Install Hexo"></a>2. Install Hexo</h3><p>Pastikan sudah install Node.js versi terbaru. Lalu jalankan perintah ini :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p>Jika memunculkan informasi dari Hexo, maka Hexo telah terinstall dengan benar.</p>
+<p>&nbsp;</p>
+<h3 id="3-Buat-local-project-GitHub-Pages"><a href="#3-Buat-local-project-GitHub-Pages" class="headerlink" title="3. Buat local project GitHub Pages"></a>3. Buat local project GitHub Pages</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init Ztrohub.github.io</span><br><span class="line">cd Ztrohub.github.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="4-Jalankan-Test-Server"><a href="#4-Jalankan-Test-Server" class="headerlink" title="4. Jalankan Test Server"></a>4. Jalankan Test Server</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>Buka link yang diberikan pada browser. Biasanya <code>localhost:4000</code></p>
+<p>&nbsp;</p>
+<h3 id="5-Atur-Configurasi-Blog"><a href="#5-Atur-Configurasi-Blog" class="headerlink" title="5. Atur Configurasi Blog"></a>5. Atur Configurasi Blog</h3><p>Buka folder <code>Ztrohub.github.io</code> dengan code editor, lalu edit pada file <code>_config.yml</code> seperti dibawah. Sesuaikan dengan blog kamu.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Ztrohub</span><br><span class="line">subtitle: &#x27;Welcome to Wonderland&#x27;</span><br><span class="line">description: &#x27;Ztroid personal Blog&#x27;</span><br><span class="line">keywords:</span><br><span class="line">author: Ztroid</span><br><span class="line">language: id</span><br><span class="line">timezone: Asia/Jakarta</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://Ztrohub.github.io/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="6-Atur-Informasi-Github"><a href="#6-Atur-Informasi-Github" class="headerlink" title="6. Atur Informasi Github"></a>6. Atur Informasi Github</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>Edit file <code>_config.yml</code> seperti dibawah. Sesuaikan dengan blog kamu.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/Ztrohub/Ztrohub.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="7-Generate-Project-Hexo"><a href="#7-Generate-Project-Hexo" class="headerlink" title="7. Generate Project Hexo"></a>7. Generate Project Hexo</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="8-Buat-Post-Baru"><a href="#8-Buat-Post-Baru" class="headerlink" title="8. Buat Post Baru"></a>8. Buat Post Baru</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;first post&quot;</span><br></pre></td></tr></table></figure>
+<p>Edit post pada <code>/source/_posts/first-post.md</code>. <br>Perlu diketahui Hexo menggunakan bahasa Markdown (<code>.md</code>) dan Embedded JavaScript (<code>.ejs</code>) pada postingan.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Hexo docs Writing</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheat Sheet</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="9-Delete-Hello-World"><a href="#9-Delete-Hello-World" class="headerlink" title="9. Delete Hello World"></a>9. Delete Hello World</h3><p>Hapus file <code>/source/_posts/hello-world.md</code><br>Hello world bawaan Hexo tidak perlu ikut di deploy.</p>
+<p>&nbsp;</p>
+<h3 id="10-Deploy-ke-Github"><a href="#10-Deploy-ke-Github" class="headerlink" title="10. Deploy ke Github"></a>10. Deploy ke Github</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Setelah deploy, maka blog anda akan muncul di <code>https://****.github.io</code></p>
+<p>Setiap kali selesai melakukan perubahan pada local seperti tambah post / ubah theme website, maka jalankan kedua perintah di atas.</p>
+<p>&nbsp;</p>
+<h3 id="11-Ganti-Theme-Blog"><a href="#11-Ganti-Theme-Blog" class="headerlink" title="11. Ganti Theme Blog"></a>11. Ganti Theme Blog</h3><p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/wiki/Themes">https://github.com/hexojs/hexo/wiki/Themes</a></p>
+<p>Pilih theme yang tersedia lewat link diatas lalu lakukan clone dengan cara :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;repo-theme&gt; themes/&lt;nama-theme&gt;</span><br></pre></td></tr></table></figure>
+<p>Sebagai contoh saya ingin pakai <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-light">https://github.com/hexojs/hexo-theme-light</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/hexojs/hexo-theme-light.git themes/light</span><br></pre></td></tr></table></figure>
+<p>lalu edit pada file <code>_config.yml</code> seperti dibawah. Sesuaikan dengan theme kamu.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: light</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="13-Menambah-Page-File"><a href="#13-Menambah-Page-File" class="headerlink" title="13. Menambah Page File"></a>13. Menambah Page File</h3><p>Untuk menambahkan seperti aboutme dan page lainnya gunakan perintah</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;aboutme&quot;</span><br></pre></td></tr></table></figure>
+<p>lalu edit file <code>/source/aboutme/index.md</code></p>
+<p>&nbsp;</p>
+<h3 id="14-Memotong-Post-agar-Muncul-Sebagian-pada-Website-Utama"><a href="#14-Memotong-Post-agar-Muncul-Sebagian-pada-Website-Utama" class="headerlink" title="14. Memotong Post agar Muncul Sebagian pada Website Utama"></a>14. Memotong Post agar Muncul Sebagian pada Website Utama</h3><p>Untuk memunculkan sebagian isi post (seperti read more), tambahkan <code>&lt;!-- more --&gt;</code> di dalam post pada bagian yang ingin dipotong.</p>
 
       
     </div>
@@ -115,7 +167,7 @@
 
     <span class="post-categories">
       <i class="icon-categories"></i>
-        <a href="/categories/Programming/">Programming</a>, <a href="/categories/Programming/Web/">Web</a>, <a href="/categories/Programming/Web/Git/">Git</a>
+        <a href="/categories/Web/">Web</a>, <a href="/categories/Web/Git/">Git</a>
     </span>
     
 
@@ -124,7 +176,7 @@
 
     <span class="post-tags">
       <i class="icon-tags"></i>
-        <a href="/tags/Hexo/">Hexo</a><a href="/tags/nodeJS/">nodeJS</a>
+        <a href="/tags/Hexo/">Hexo</a><a href="/tags/Node-js/">Node.js</a>
     </span>
     
 
