@@ -192,6 +192,7 @@
 	</section>
 	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
 	<script>
 		var gitalk = new Gitalk({
 			clientID: '13e861fe3986bf8596a7',
@@ -199,7 +200,7 @@
 			repo: 'Ztrohub.github.io',
 			owner: 'Ztrohub',
 			admin: ['Ztrohub'],
-			id: location.pathname,
+			id: md5(location.pathname),
 			distractionFreeMode: false
 		})
 
