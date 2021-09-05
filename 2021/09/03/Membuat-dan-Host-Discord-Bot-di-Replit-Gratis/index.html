@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Membuat dan Host Discord Bot di Replit Gratis | Ztrohub | Welcome to Wonderland</title>
+
+  
+  <meta name="author" content="Ztroid">
+  
+
+  
+  <meta name="description" content="Ztroid personal Blog">
+  
+
+  
+  
+  <meta name="keywords" content="DiscordJS">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Membuat dan Host Discord Bot di Replit Gratis"/>
+
+  <meta property="og:site_name" content="Ztrohub"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Ztrohub" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Ztrohub</a>
+    </h1>
+    <p class="site-description">Welcome to Wonderland</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/categories">Categories</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Membuat dan Host Discord Bot di Replit Gratis</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2021/09/03/Membuat-dan-Host-Discord-Bot-di-Replit-Gratis/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-09-03T01:26:12.000Z">
+          2021-09-03
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <img src="https://repository-images.githubusercontent.com/40484398/e305e980-cb80-11eb-9bb9-c5d3ec013658" alt="DiscordJS" width="750"/>
+
+<p>Saat ini saya sedang memiliki kesukaan untuk membuat discord bot. Banyak kegunaan discord bot untuk server kita, seperti mengatur server, membuat game, memutar lagu, dsb. Namun saat ini saya fokus membuat discord bot untuk membantu kuliah ketika ada soal hitung-hitungan yang berulang-ulang.</p>
+<p>Banyak bahasa yang disediakan untuk membuat discord bot. Namun yang menurut saya mudah dan sudah saya pahami adalah JavaScript dengan menggunakan DiscordJS.</p>
+<span id="more"></span>
+
+<p>Untuk membuat dan menggunakan DiscordJS cukup mudah. Cukup buka Youtube dan cari tutorialnya, lalu tinggal di-implementasikan. Masalah utama setelah berhasil membuat bot adalah melakukan hosting.</p>
+<p>Pertama kali saya mencoba hosting dengan <a target="_blank" rel="noopener" href="https://www.heroku.com/">Heroku</a> dan berhasil. Namun bot saya hanya dapat online sekitar 3/4 bulan saja. Selebihnya bot saya akan mati. Akhirnya saya coba beralih dengan <a target="_blank" rel="noopener" href="https://replit.com/">Replit</a>. Bot saya bisa berjalan 24/7 non-stop dan gratis.</p>
+<hr>
+<h2 id="Pengantar"><a href="#Pengantar" class="headerlink" title="Pengantar"></a>Pengantar</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://discordjs.guide/#before-you-begin">DiscordJS Guide</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.replit.com/archive/quick-start">Replit Guide</a></li>
+</ul>
+<h2 id="Dibutuhkan"><a href="#Dibutuhkan" class="headerlink" title="Dibutuhkan"></a>Dibutuhkan</h2><ul>
+<li>Replit</li>
+<li>DiscordJS v13</li>
+<li>NodeJS v16</li>
+<li>Discord Bot Account</li>
+</ul>
+<hr>
+<h2 id="Langkah-Langkah"><a href="#Langkah-Langkah" class="headerlink" title="Langkah-Langkah"></a>Langkah-Langkah</h2><p>&nbsp;</p>
+<h3 id="1-Buat-Discord-Bot"><a href="#1-Buat-Discord-Bot" class="headerlink" title="1. Buat Discord Bot"></a>1. Buat Discord Bot</h3><ul>
+<li>Buka <a target="_blank" rel="noopener" href="https://discordapp.com/developers/applications/me">https://discordapp.com/developers/applications/me</a> lalu pilih <code>New Application</code>. </li>
+<li>Berikan nama bot lalu pilih <code>Create</code>.</li>
+<li>Atur Deskripsi dan gambar bot sesuai keinginan lalu pergi ke tab <code>Bot</code></li>
+<li>Click <code>Add Bot</code> lalu click <code>Yes, do it!</code>.</li>
+<li>Setelah berhasil membuat bot yang perlu diperhatikan adalah <code>TOKEN</code> pada tab bot yang nanti akan kita gunakan untuk menghubungkan bot dengan codingan kita.</li>
+</ul>
+<p>Perlu diperhatikan bahwa <code>TOKEN</code> bot bersifat sangat rahasia dan tidak boleh di share ke public. Saya pernah mencoba push di github dan token tersebut langsung diganti oleh deteksi dari discord.</p>
+<p>&nbsp;</p>
+<h3 id="2-Buat-Akun-dan-Initiate-Replit"><a href="#2-Buat-Akun-dan-Initiate-Replit" class="headerlink" title="2. Buat Akun dan Initiate Replit"></a>2. Buat Akun dan Initiate Replit</h3><ul>
+<li>Pergi ke <a target="_blank" rel="noopener" href="https://replit.com/">https://replit.com/</a> lalu buat akun atau login.</li>
+<li>Pada halaman dashboard Replit, click <code>New Repl</code>.</li>
+<li>Pada bagian language pilih <code>Node.js</code>. Berikan nama bot lalu click <code>Create repl</code></li>
+<li>Anda akan dihadirkan pada halaman replit IDE.</li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="3-Install-Node-Versi-Terbaru"><a href="#3-Install-Node-Versi-Terbaru" class="headerlink" title="3. Install Node Versi Terbaru"></a>3. Install Node Versi Terbaru</h3><p>Sebelum anda mulai <em>coding</em> bot anda. Ada beberapa hal yang perlu disetting terlebih dahulu.</p>
+<p>Yang pertama adalah install node versi terbaru. DiscordJS v13 ( terbaru saat ini ) memerlukan node versi terbaru, namun Replit sendiri hanya menyediakan node versi lama. Tapi tenang, kita dapat mengganti versi node menjadi terbaru.</p>
+<p>Pergi ke tab <code>shell</code> di bagian kanan, lalu ketik command berikut:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i node@latest</span><br></pre></td></tr></table></figure>
+
+<p>Buat sebuah file dengan nama <code>.replit</code> lalu isi dengan code berikut:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run=&quot;npm start&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Terakhir pergi ke file <code>package.json</code> lalu cari pada bagian <code>&quot;scripts&quot;</code> dan ganti menjadi seperti berikut:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;start&quot;</span>: <span class="string">&quot;node .&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Maka Replit anda sudah diupdate menjadi node versi terbaru.</p>
+<p>&nbsp;</p>
+<h3 id="4-Setting-Environment-Untuk-Token-Bot"><a href="#4-Setting-Environment-Untuk-Token-Bot" class="headerlink" title="4. Setting Environment Untuk Token Bot"></a>4. Setting Environment Untuk Token Bot</h3><p>Masih ingatkah anda bahwa token bot bersifat sangat rahasia? Masalahnya adalah semua <em>codingan</em> kita di Replit versi gratis akan bersifat public tidak seperti github yang memberikan pilihan private. </p>
+<p>Tentu jika kita langsung melempar token kita ke dalam <em>codingan</em> maka akan dapat dilihat orang lain dan berbahaya untuk bot dan server kita.</p>
+<p>Oleh karena itu kita memanfaatkan fitur <code>Environment Variabel</code> dari Replit untuk menyimpan token kita karena pada variabel tersebut semua key kita tidak akan muncul pada proses manapun sama seperti jika kita menggunakan file <code>.env</code>.</p>
+<p>Untuk mengambil token bot :</p>
+<ul>
+<li>Kembali ke <a target="_blank" rel="noopener" href="https://discord.com/developers/applications">https://discord.com/developers/applications</a> lalu click bot yang kita inginkan.</li>
+<li>Pergi ke tab <code>Bot</code> di bagian kiri lalu pada bagian <code>TOKEN</code> click <code>Copy</code>.</li>
+</ul>
+<p>Untuk membuat Environment Variabel:</p>
+<ul>
+<li>Caranya adalah pergi ke tab <code>Secrets (Environment Variabel)</code> di sebelah kiri bergambar gembok.</li>
+<li>Lalu pada bagian key isi dengan nama variabel untuk Token kita. Contoh saya akan isi dengan nama <code>TOKEN</code>.</li>
+<li>Lalu pada bagian value isi dengan token bot kita.</li>
+</ul>
+<p>Maka Token bot kita sudah aman dan tidak akan di share ke siapapun.</p>
+<p>&nbsp;</p>
+<h3 id="5-Coding-Bot-Sederhana"><a href="#5-Coding-Bot-Sederhana" class="headerlink" title="5. Coding Bot Sederhana"></a>5. Coding Bot Sederhana</h3><p>Setelah selesai mensetting Replit kita maka kita tinggal melakukan coding untuk bot kita. </p>
+<p>Pada file <code>index.js</code> isi dengan codingan berikut:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Client, Intents &#125; = <span class="built_in">require</span>(<span class="string">&#x27;discord.js&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mySecret = process.env[<span class="string">&#x27;TOKEN&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// Create a new client instance</span></span><br><span class="line"><span class="keyword">const</span> client = <span class="keyword">new</span> Client(&#123; <span class="attr">intents</span>: [Intents.FLAGS.GUILDS] &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// When the client is ready, run this code (only once)</span></span><br><span class="line">client.once(<span class="string">&#x27;ready&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;Ready!&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">client.on(<span class="string">&quot;message&quot;</span>, <span class="function">(<span class="params">message</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (message.content.startsWith(<span class="string">&quot;ping&quot;</span>)) &#123;</span><br><span class="line">    message.channel.send(<span class="string">&quot;pong!&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Login to Discord with your client&#x27;s token</span></span><br><span class="line">client.login(mySecret);</span><br></pre></td></tr></table></figure>
+
+<p>Pada codingan di atas berfungsi sederhana yaitu mengampilkan pesan “pong!” jika kita mengetik “ping” di channel server.</p>
+<p>Untuk informasi lebih lanjut bisa membaca di <a target="_blank" rel="noopener" href="https://discord.js.org/#/docs/main/stable/general/welcome">DiscordJs Docs</a> atau melihat tutorial di Youtube.</p>
+<p>Click Tombol <code>RUN</code> pada bagian atas dan bot kita akan dijalankan. Jika pada bigian console sebelah kanan terdapat tulisan <code>Ready!</code> tanpa pesan error maka kita berhasil membuat dan menjalankan bot kita. </p>
+<p>Langkah selanjutnya adalah menginvite bot kita ke server lalu melakukan testing dengan mengirim “ping” dan melihat apakah muncul respon dari bot kita.</p>
+<p>&nbsp;</p>
+<h3 id="6-Menjalankan-Bot-24-7-dengan-UpTimeRobot"><a href="#6-Menjalankan-Bot-24-7-dengan-UpTimeRobot" class="headerlink" title="6. Menjalankan Bot 24/7 dengan UpTimeRobot"></a>6. Menjalankan Bot 24/7 dengan UpTimeRobot</h3><p>Perlu diketahui Replit hanya akan menjalankan codingan kita selama 30 menit jika sudah tidak mendapat perintah atau respon. </p>
+<p>Berbeda dengan web yang dijalankan dengan Replit, setelah 30 menit akan masuk ke dalam mode <code>sleep</code>. Triknya adalah mengubah codingan kita ke dalam bentuk web lalu kita akan menggunakan UpTimeRobot untuk memberikan respon sehingga bot tidak masuk ke mode <code>sleep</code>. </p>
+<p>Kita memilih UpTimeRobot karena gratis dan sama sekali tidak diberi batasan.</p>
+<p>Untuk melakukannya, pertama kita stop bot kita, lalu tambahkan codingan berikut di bagian paling bawah <code>index.js</code>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.writeHead(<span class="number">200</span>);</span><br><span class="line">  res.end(<span class="string">&#x27;ok&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>Setelah itu jalankan bot kita dan akan muncul tampilan web dengan url di sebelah kanan bertuliskan <code>ok</code>. Jika sesuai berarti kita berhasil mengubah bot kita ke bentuk web.</p>
+<p>Selanjutnya pergi ke <a target="_blank" rel="noopener" href="https://uptimerobot.com/">https://uptimerobot.com/</a> lalu lakukan login atau register.</p>
+<p>Setelah itu masuk ke dashboard UpTimeRobot lalu click <code>Add New Monitor</code>.</p>
+<p>Pada isi seperti berikut :</p>
+<ul>
+<li>Monitor Type: HTTPS</li>
+<li>Friendly Name: <code>nama bot anda</code></li>
+<li>URL (or IP): <code>isi dengan url yang ada di sebelah kanan Replit tadi</code></li>
+<li>Monitor interval: 5 minutes</li>
+</ul>
+<p>Setelah itu click <code>Create Monitor</code>.</p>
+<p>Selamat bot anda akan berjalan 24 jam tanpa gangguan. Meski begitu, Replit akan melakukan refresh setiap harinya sehingga bot kita akan down untuk beberapa menit saja. Namun, menurut saya cara ini adalah yang terbaik untuk melakukan hosting bot discord secara gratis.</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/Hosting/">Hosting</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/DiscordJS/">DiscordJS</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+	<section id="comment" class="comment">
+		<div id="gitalk-container"></div>
+	</section>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+	<script>
+		var gitalk = new Gitalk({
+			clientID: '13e861fe3986bf8596a7',
+			clientSecret: 'eeacb20916e1b3e57ffefc1c570a8fd1a088ea07',
+			repo: 'Ztrohub.github.io',
+			owner: 'Ztrohub',
+			admin: ['Ztrohub'],
+			id: md5(location.pathname),
+			distractionFreeMode: false
+		})
+
+		gitalk.render('gitalk-container')
+	</script>
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2021 Ztroid
+    
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
+</body>
+</html>
