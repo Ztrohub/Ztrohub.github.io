@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Cara Install dan Jalankan Kali Linux di Windows 10 | Ztrohub | Welcome to Wonderland</title>
+
+  
+  <meta name="author" content="Ztroid">
+  
+
+  
+  <meta name="description" content="Ztroid personal Blog">
+  
+
+  
+  
+  <meta name="keywords" content="WSL">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Cara Install dan Jalankan Kali Linux di Windows 10"/>
+
+  <meta property="og:site_name" content="Ztrohub"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Ztrohub" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Ztrohub</a>
+    </h1>
+    <p class="site-description">Welcome to Wonderland</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/categories">Categories</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Cara Install dan Jalankan Kali Linux di Windows 10</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2021/10/12/Cara-Install-dan-Jalankan-Kali-Linux-di-Windows-10/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-10-12T07:21:01.000Z">
+          2021-10-12
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <img src="https://tl360.b-cdn.net/wp-content/uploads/2018/02/Dual-Boot-Kali-Linux-With-Windows-10-tutorial-696x387.jpeg" alt="Kali" width="750"/>
+
+<p>Meskipun cara ini sudah ada sejak 2016 kita pura-pura kaget saja ya.. wkwk. WOW kita bisa install Kali Linux di Windows? BETUL! Di Windows 10 sekarang kita bisa install dan jalankan Kali Linux dan distro Linux lainnya.</p>
+<p>Dulu saya masih ingat jika kita ingin menggunakan os linux dan windows secara bersamaan, maka saya harus melakukan install dual boot. Anda harus memilih menjalankan mesin dengan os window atau linux Kini anda dapat membuka sebuah OS seperti membuka aplikasi.</p>
+<p>Fitur yang akan kita gunakan adalah WSL (Window Subsystem for Linux). Banyak distro yang disupport seperti kali, ubuntu, debian, dll. Cara untuk melakukan installasinya cukup simple dibandingkan melakukan installasi dual boot. Untuk kali ini saya akan menjelaskan cara install distro Kali Linux. Kenapa kali? Karena keren aja… hehe</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="Pengantar"><a href="#Pengantar" class="headerlink" title="Pengantar"></a>Pengantar</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/wsl/about">What is the Windows Subsystem for Linux?</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.kali.org/docs/wsl/win-kex/">Kali Win-KeX</a></li>
+</ul>
+<h2 id="Dibutuhkan"><a href="#Dibutuhkan" class="headerlink" title="Dibutuhkan"></a>Dibutuhkan</h2><ul>
+<li>Windows 10 Version 1607 or Above</li>
+<li>64 bit</li>
+</ul>
+<hr>
+<h2 id="Langkah-Langkah"><a href="#Langkah-Langkah" class="headerlink" title="Langkah-Langkah"></a>Langkah-Langkah</h2><p>&nbsp;</p>
+<h3 id="1-Aktifkan-WSL-di-Windows"><a href="#1-Aktifkan-WSL-di-Windows" class="headerlink" title="1. Aktifkan WSL di Windows"></a>1. Aktifkan WSL di Windows</h3><p>Cari <strong>PoweShell</strong> pada kolom search dan jalankan secara <strong>Run as Administrator</strong>.<br>Jalankan perintah di bawah untuk mengaktifkan WSL di Windows</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</span><br></pre></td></tr></table></figure>
+
+<p>Setelah proses selesai tanpa error anda akan diminta untuk restart, dan lakukan restart.</p>
+<p>&nbsp;</p>
+<h3 id="2-Aktifkan-Virtual-Machine-Windows"><a href="#2-Aktifkan-Virtual-Machine-Windows" class="headerlink" title="2. Aktifkan Virtual Machine Windows"></a>2. Aktifkan Virtual Machine Windows</h3><p>Setelah restart buka kembali PowerShell as Administrator lalu jalankan 2 perintah dibawah untuk mengaktifkan VM yang nanti akan memberikan GUI pada OS Linux kita.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</span><br><span class="line">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</span><br></pre></td></tr></table></figure>
+
+<p>Jika tidak ada error, restart kembali komputer.</p>
+<p>&nbsp;</p>
+<h3 id="3-Install-WSL-Versi-2"><a href="#3-Install-WSL-Versi-2" class="headerlink" title="3. Install WSL Versi 2"></a>3. Install WSL Versi 2</h3><p>WSL pada windows kita adalah versi pertama. Untuk menggunakan fitur Virtual Machine kita harus mengupdate WSL ke versi 2.</p>
+<p>Caranya buka link <a target="_blank" rel="noopener" href="https://aka.ms/wsl2kernel">https://aka.ms/wsl2kernel</a> lalu kalian akan diarahkan pada website microsoft. Click link bertuliskan <strong>“WSL2 Linux kernel update package for x64 machines”</strong>.</p>
+<p>Download lalu jalankan setup hingga installasi berhasil.</p>
+<p>Jika sudah, jalankan kembali PowerShell as Administrator dan jalankan perintah di bawah</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --set-default-version 2</span><br></pre></td></tr></table></figure>
+
+<p>Perintah di atas berfungsi untuk mensetting agar WSL yang dipakai adalah versi ke 2.</p>
+<p>&nbsp;</p>
+<h3 id="4-Install-OS-Linux"><a href="#4-Install-OS-Linux" class="headerlink" title="4. Install OS Linux"></a>4. Install OS Linux</h3><p>Untuk install distro Linux yang diinginkan sangat mudah. Anda cukup buka Windows Store (Cari Windows Store pada kolom search Windows) lalu cari Kali Linux pada pencarian dan lakukan penginstallan. Anda juga dapat menggunakan distro lainnya.</p>
+<p>Setelah installasi selesai cari di kolom search Windows “Kali Linux”. Anda akan menemukan sebuah OS dalam bentuk aplikasi. Jika dijalankan akan membuka terminal dari Kali Linux.</p>
+<p>Tunggu installasi selesai lalu buat username dan password dan Selamat Kali Linux berhasil terinstall di Windows kalian!</p>
+<p>&nbsp;<br><em>Lho kok cuma terminal? Kok gk ada GUI-nya?</em><br>Ucap pengguna Windows puluhan tahun seperti saya<br>&nbsp;</p>
+<p>Perlu diketahui, nyawa dari linux sebenarnya ada pada terminalnya. Anda dapat melakukan segala sesuatu melalui terminal. Berbeda dengan Windows yang memiliki batasan” ketika menggunakan cmd.</p>
+<p>Namun tenang, kebanyakan distro Linux sudah memberikan fasilitas GUI meskipun tidak sebagus Windows dan OS lainnya (ingat kembali bahwa nyawa Linux ada di Terminalnya). Dan kita dapat menggunakan GUI di WSL secara ringan.</p>
+<p>&nbsp;</p>
+<h3 id="5-Install-Win-KeX-Kali"><a href="#5-Install-Win-KeX-Kali" class="headerlink" title="5. Install Win-KeX Kali"></a>5. Install Win-KeX Kali</h3><p>Kali memiliki Package tambahan bernama Win-KeX. Package ini akan memanfaatkan Virtual Machine yang tadi kita download untuk menjalankan GUI dari Kali Linux kita.</p>
+<p>Cara ini adalah cara paling mudah dan ringan untuk menampilkan GUI. Sebelumnya saya menggunakan cara lain namun komputer saya tidak sanggup untuk menjalankan Virtual Machine.</p>
+<p>Untuk menginstall Win-KeX, buka terminal Kali kita lalu masukkan perintah berikut:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt install -y kali-win-kex</span><br></pre></td></tr></table></figure>
+
+<p>Setelah proses install selesai kita tinggal menjalankannya.</p>
+<p>&nbsp;</p>
+<h3 id="6-Jalankan-Win-KeX"><a href="#6-Jalankan-Win-KeX" class="headerlink" title="6. Jalankan Win-KeX"></a>6. Jalankan Win-KeX</h3><p>Win-KeX memiliki 3 buah mode untuk dijalankan.</p>
+<ul>
+<li>Window Mode :</li>
+</ul>
+<img src="https://www.kali.org/docs/wsl/win-kex/win-kex.png" alt="Window Mode" width="750"/>
+
+<p>Untuk menjalankan gunakan</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kex --win -s</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Enhanced Session Mode :<img src="https://www.kali.org/docs/wsl/win-kex/win-kex-2.png" alt="Window Mode" width="750"/></li>
+</ul>
+<p>Untuk menjalankan gunakan</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kex --esm --ip -s</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Seamless Mode :<img src="https://www.kali.org/docs/wsl/win-kex/win-kex-sl.png" alt="Window Mode" width="750"/></li>
+</ul>
+<p>Untuk menjalankan gunakan</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kex --sl -s</span><br></pre></td></tr></table></figure>
+
+<p>Selamat, Kali Linux dengan GUI berhasil berjalan di Windows 10 kita.</p>
+<p>Perlu diperhatikan ketika menjalankan Win-KeX akan diminta persetujuan dari firewall. Pastikan unuk <strong>Accept PUBLIC dan PRIVATE</strong>.</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/OS/">OS</a>, <a href="/categories/OS/Linux/">Linux</a>, <a href="/categories/OS/Linux/Kali-Linux/">Kali-Linux</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/WSL/">WSL</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+	<section id="comment" class="comment">
+		<div id="gitalk-container"></div>
+	</section>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+	<script>
+		var gitalk = new Gitalk({
+			clientID: '13e861fe3986bf8596a7',
+			clientSecret: 'eeacb20916e1b3e57ffefc1c570a8fd1a088ea07',
+			repo: 'Ztrohub.github.io',
+			owner: 'Ztrohub',
+			admin: ['Ztrohub'],
+			id: md5(location.pathname),
+			distractionFreeMode: false
+		})
+
+		gitalk.render('gitalk-container')
+	</script>
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2021 Ztroid
+    
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
+</body>
+</html>
